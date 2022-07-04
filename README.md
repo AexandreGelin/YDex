@@ -16,10 +16,10 @@
 - Un smartphone avec l'application Expo ou un navigateur web
 
 ## Au démarrage:
+- Ouvrir le projet dans  avec l'ide
 - Lancer le projet java pour créer la base de donnée
 - Se connecter en admin
-- Importer les fichiers csv contenus dans le dossier 'data'
-- Modifier dans le fichier PokemonList.js dans la fonction getPokemonList avec son adresse ip (se référer au commentaire)
+- Importer les fichiers csv contenus dans le dossier 'back>data'
 - Aller à l'adresse localhost19002 et cliquer sur 'Run in web browser' OU scanner le QR code dans l'application ExpoGo
 
 ## Demarrer le projet :
