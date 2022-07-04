@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -23,13 +24,13 @@ public class TypeController {
         return typeService.createOrUpdate(type);
     }
 
-    @RequestMapping(path = "/{typename}", method = RequestMethod.GET)
+    @RequestMapping(path = "/{typename}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Type get(@PathVariable(name = "typename") String typename) {
         return typeService.getUserById(typename);
     }
 
     @Operation(summary = "Récupération de tous les types")
-    @RequestMapping(path = "/_all", method = RequestMethod.GET)
+    @RequestMapping(path = "/_all", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Type> getAllUsers() {
         return typeService.getAllTypes();
     }
@@ -39,7 +40,7 @@ public class TypeController {
         typeService.deleteType(typename);
     }
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Page<Type> getUsers(Pageable pageable) {
         return typeService.getTypesWithPaging(pageable);
     }

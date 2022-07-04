@@ -20,8 +20,8 @@ public class PokemonService  {
         return pokemonRepository.save(pokemon);
     }
 
-    public Pokemon getUserById(String pokename) {
-        return pokemonRepository.findById(pokename).orElse(null);
+    public Pokemon getUserById(String id_poke) {
+        return pokemonRepository.findById(id_poke).orElse(null);
     }
 
 

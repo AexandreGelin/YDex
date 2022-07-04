@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -23,23 +24,23 @@ public class PokemonController {
         return pokemonService.createOrUpdate(pokemon);
     }
 
-    @RequestMapping(path = "/{pokename}", method = RequestMethod.GET)
-    public Pokemon get(@PathVariable(name = "pokename") String pokename) {
-        return pokemonService.getUserById(pokename);
+    @RequestMapping(path = "/{id_poke}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Pokemon get(@PathVariable(name = "id_poke") String id_poke) {
+        return pokemonService.getUserById(id_poke);
     }
 
     @Operation(summary = "Récupération de tous les pokemons")
-    @RequestMapping(path = "/_all", method = RequestMethod.GET)
+    @RequestMapping(path = "/_all", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Pokemon> getAllUsers() {
         return pokemonService.getAllPokemons();
     }
 
-    @RequestMapping(path = "/{pokename}", method = RequestMethod.DELETE)
-    public void deleteUser(@PathVariable(name = "pokename") String pokename) {
-        pokemonService.deletePokemon(pokename);
+    @RequestMapping(path = "/{id_poke}", method = RequestMethod.DELETE)
+    public void deleteUser(@PathVariable(name = "id_poke") String id_poke) {
+        pokemonService.deletePokemon(id_poke);
     }
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Page<Pokemon> getUsers(Pageable pageable) {
         return pokemonService.getPokemonsWithPaging(pageable);
     }
