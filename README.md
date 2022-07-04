@@ -8,7 +8,7 @@
 - Parce que Pokemon > YuGiOh (& digimon mais personne s'en souviens) mais aussi car nous avons grandis avec 😉
 
 ## Prérequis :
-- Node.js (latest version)
+- Node.js (16.14.0)
 - Expo
 ``` bash
   npm i -g expo-cli
