@@ -5,7 +5,7 @@
  
  
 ## Pourquoi Pokemon:
-- Parce que Pokemon > YuGiOh (& digimon mais personne s'en souviens) mais aussi car nous avons grandis avec :)
+- Parce que Pokemon > YuGiOh (& digimon mais personne s'en souviens) mais aussi car nous avons grandis avec 😉
 
 ## Prérequis :
 - Node.js (latest version)
