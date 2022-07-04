@@ -20,7 +20,6 @@
 - Lancer le projet java pour créer la base de donnée
 - Se connecter en admin
 - Importer les fichiers csv contenus dans le dossier 'back>data'
-- Aller à l'adresse localhost:19002 et cliquer sur 'Run in web browser' OU scanner le QR code dans l'application ExpoGo
 
 ## Demarrer le projet :
 - Pour le back en java il faut lancer le projet depuis l'IDE
@@ -32,6 +31,7 @@
 ```bash
   npm start
 ```
+- Aller à l'adresse localhost:19002 et cliquer sur 'Run in web browser' OU scanner le QR code dans l'application ExpoGo
 
 ## Explication importante
 - Le projet à été fait intégralement en peer-programming à cause d'un soucis de clavier de PC portable et d'un déménagement.
