@@ -39,13 +39,6 @@ public class User {
 	@Column
 	private String role;
 
-	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-	@JoinColumn(name = "user_id")
-	private List<Address> addresses = new ArrayList<Address>();
-
-	@ManyToMany(mappedBy = "users")
-	@JsonIgnore
-	private List<Sortie> sorties;
 	
 	public String getUsername() {
 		return username;
@@ -83,16 +76,5 @@ public class User {
 	public void setRole(String role) {
 		this.role = role;
 	}
-	public List<Address> getAddresses() {
-		return addresses;
-	}
-	public void setAddresses(List<Address> addresses) {
-		this.addresses = addresses;
-	}
-	public List<Sortie> getSorties() {
-		return sorties;
-	}
-	public void setSorties(List<Sortie> sorties) {
-		this.sorties = sorties;
-	}
+
 }

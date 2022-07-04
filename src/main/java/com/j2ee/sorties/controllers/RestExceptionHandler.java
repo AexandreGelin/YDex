@@ -31,8 +31,6 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
         }
         ValidationError error = new ValidationError(errMessage, fieldErrors );
-        // Utiliser ex.getBindingResult().getFieldErrors() pour
-        // renseigner les erreurs dans l’objet ValidationError
         return new ResponseEntity<>(error, status);
     }
 
